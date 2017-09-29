@@ -8,7 +8,7 @@
 \usepackage{listings}
 \lstset{language=C++,linewidth=\columnwidth,breaklines=true,basicstyle=\footnotesize,tabsize=2,frame=l,framesep=15pt,xleftmargin=20pt}
 
-\author{Bart Braem -- Johan Bergs}
+\author{Johan Bergs -- Jeremy Van den Eynde}
 \title{Click Frequently Asked Questions}
 \date{}
 
@@ -16,8 +16,6 @@
 \maketitle
 \tableofcontents
 
-\section*{Acknowledgements}
-A big thank you to Michael Voorhaen, one of the original authors of this FAQ.
 \section{General} % (fold)
 \label{sec:general}
 
@@ -28,7 +26,7 @@ The Click Modular Router homepage \url{http://www.read.cs.ucla.edu/click/}. You 
 \subsubsection*{I have asked everyone and no one can help me with my Click problems. Can
 I now ask for help on the Click malinglist?}
 
-NO. Mail to bart.braem@uantwerpen.be and johan.bergs@uantwerpen.be, they'll
+NO. Mail to Johan Bergs and Jeremy Van den Eynde, they'll
 help you. (If everyone mails simple questions to the mailinglist then
 the high quality of it will drop, with less and worse Click releases as
 a consequence.)
@@ -393,8 +391,8 @@ More information on this subject is available at \url{http://en.wikipedia.org/wi
 
 \subsubsection*{What about uint\_64?}
 
-Try to avoid using that, if you need to then you should contact Bart and
-Johan.
+Try to avoid using that, if you need to then you should contact Johan and
+Jeremy.
 
 \subsubsection*{There is no such thing as an uint4\_t, and I need this for two adjacent
 fields?}
@@ -443,7 +441,7 @@ uint16_t c;
 };
 \end{lstlisting}
 
-On a 32 bit system sizeof (struct X) would return 4. However, on a 64 bit system, this would return 8, as 8 bytes is the smallest multiple of the word length (8) that can represents 4 bytes. If you want to be able the actual size of a struct instead of the padded one, the solution is to define your struct as follows:
+On a 32 bit system sizeof (struct X) would return 4. However, on a 64 bit system, this would return 8, as 8 bytes is the smallest multiple of the word length (8) that can represents 4 bytes. If you want to be able to work with the actual size of a struct instead of the padded one, the solution is to define your struct as follows:
 
 \begin{lstlisting}
 struct __attribute__((__packed__)) X {
@@ -460,7 +458,7 @@ This statement will instruct your compiler to only make the struct as large as i
 \subsubsection*{My code crashes, how do I start debugging?}
 
 Take a look at valgrind, ddd and gdb. If you need more information about
-these tools just post a question or ask Bart and Johan.
+these tools just post a question or ask Joha and jeremyn.
 
 \subsubsection*{My elements configures without errors and still I get an unspecified
 error?}
